@@ -82,14 +82,14 @@ public:
     K center;
 
     // jwala added destructor
-    ~TIntervalTree<T,K>() {
+    ~TIntervalTree() {
       if (left)
         delete left;
       if (right)
         delete right;
      }
 
-    TIntervalTree<T,K>(void)
+    TIntervalTree(void)
         : left(NULL)
         , right(NULL)
         , center(0)
@@ -101,7 +101,7 @@ private:
 }
 public:
 
-    TIntervalTree<T,K>(const intervalTree& other)
+    TIntervalTree(const intervalTree& other)
     :   intervals(other.intervals),
         left(other.left ? copyTree(*other.left) : NULL),
         right(other.right ? copyTree(*other.right) : NULL),
@@ -120,7 +120,7 @@ public:
     }
 
     // Note: changes the order of ivals
-    TIntervalTree<T,K>(
+    TIntervalTree(
             intervalVector& ivals,
             std::size_t depth = 16,
             std::size_t minbucket = 64,
