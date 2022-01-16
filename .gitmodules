@@ -1,9 +1,9 @@
 [submodule "fermi-lite"]
 	path = fermi-lite
-	url = https://github.com/jwalabroad/fermi-lite
+	url = https://github.com/bioinform/fermi-lite
 [submodule "bwa"]
 	path = bwa
-	url = https://github.com/jwalabroad/bwa
+	url = https://github.com/bioinform/bwa
 	branch = Apache2
 [submodule "htslib"]
 	path = htslib
